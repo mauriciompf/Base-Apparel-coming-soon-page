@@ -2,4 +2,44 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+* body {
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
+}
+* img {
+  width: 100%;
+  display: block;
+}
+
+.main__logo .main__logo-img {
+  width: 200px;
+}
+
+.main__intro-block {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.main__intro {
+  text-align: center;
+}
+.main__intro .main__intro-title {
+  font-size: 4rem;
+  letter-spacing: 0.1rem;
+}
+.main__intro .main__intro-title .main__intro-title--span {
+  color: hsl(0, 93%, 68%);
+}
+.main__intro .main__intro-paragraph {
+  color: hsl(0, 93%, 68%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }/*# sourceMappingURL=style.css.map */

@@ -3,36 +3,87 @@
 $clr-primary-desaturated-red: hsl(0, 36%, 70%);
 $clr-primary-soft-red: hsl(0, 93%, 68%);
 $clr-neutral-dark-grayish-red: hsl(0, 6%, 24%);
-$gradient-one: Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
-$gradient-two: Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+// $gradient-one: Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+// $gradient-two: Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
 $font: 'Josefin Sans', sans-serif;
 
+.wrap {
+    margin: 0 auto;
+    width: 85%;
+}
+
 .main__logo {
+    margin: 2rem auto;
+
     .main__logo-img {
-        width: 200px;
+        width: 50%;
     }
 }
 
 .main__intro-block {
     display: flex;
     flex-direction: column-reverse;
+    background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(255,245,245,1) 100%);
+    margin-bottom: 4rem;
 }
 
 .main__intro {
     text-align: center;
     
     .main__intro-title {
-        font-size: 4rem;
+        font-size: 3rem;
         letter-spacing: .1rem;
-        
+        text-transform: uppercase;
+        margin: 3rem 0 1rem;
+        color: $clr-neutral-dark-grayish-red;
+
         .main__intro-title--span {
-            color: $clr-primary-soft-red;
+            color: $clr-primary-desaturated-red;
+            font-weight: 300;
         }
     }
 
     .main__intro-paragraph {
-        color: $clr-primary-soft-red;
+        color: $clr-primary-desaturated-red;
+        line-height: 1.5;
+        font-size: .9rem;
+        margin-bottom: 2rem;
     }
+}
+
+.main__intro-form {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .main__intro-form-input {
+        border-radius: 2rem;
+        padding: 1rem;
+        width: 100%;
+        border: 1px solid $clr-primary-desaturated-red;
+    }
+
+    ::placeholder {
+        color: $clr-primary-desaturated-red;
+    }
+
+    .main__intro-form-button {
+        background: linear-gradient(135deg, rgba(248,191,191,1) 0%, rgba(238,140,140,1) 100%);
+        border-radius: 2rem;
+        position: absolute;
+        padding: 1rem 1.5rem;
+        border: none;
+        right: 0;
+    }
+
+    .main__intro-form-error {
+        display: none;
+        width: auto;
+    }
+}
+
+.main__hero {
+
 }
 
 .attribution { font-size: 11px; text-align: center; }

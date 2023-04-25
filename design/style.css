@@ -11,28 +11,78 @@
   width: 100%;
   display: block;
 }
+* input {
+  font-family: inherit;
+}
 
+.wrap {
+  margin: 0 auto;
+  width: 85%;
+}
+
+.main__logo {
+  margin: 2rem auto;
+}
 .main__logo .main__logo-img {
-  width: 200px;
+  width: 50%;
 }
 
 .main__intro-block {
   display: flex;
   flex-direction: column-reverse;
+  background: linear-gradient(135deg, rgb(255, 255, 255) 0%, rgb(255, 245, 245) 100%);
+  margin-bottom: 4rem;
 }
 
 .main__intro {
   text-align: center;
 }
 .main__intro .main__intro-title {
-  font-size: 4rem;
+  font-size: 3rem;
   letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  margin: 3rem 0 1rem;
+  color: hsl(0, 6%, 24%);
 }
 .main__intro .main__intro-title .main__intro-title--span {
-  color: hsl(0, 93%, 68%);
+  color: hsl(0, 36%, 70%);
+  font-weight: 300;
 }
 .main__intro .main__intro-paragraph {
-  color: hsl(0, 93%, 68%);
+  color: hsl(0, 36%, 70%);
+  line-height: 1.5;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.main__intro-form {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.main__intro-form .main__intro-form-input {
+  border-radius: 2rem;
+  padding: 1rem;
+  width: 100%;
+  border: 1px solid hsl(0, 36%, 70%);
+}
+.main__intro-form ::-moz-placeholder {
+  color: hsl(0, 36%, 70%);
+}
+.main__intro-form ::placeholder {
+  color: hsl(0, 36%, 70%);
+}
+.main__intro-form .main__intro-form-button {
+  background: linear-gradient(135deg, rgb(248, 191, 191) 0%, rgb(238, 140, 140) 100%);
+  border-radius: 2rem;
+  position: absolute;
+  padding: 1rem 1.5rem;
+  border: none;
+  right: 0;
+}
+.main__intro-form .main__intro-form-error {
+  display: none;
+  width: auto;
 }
 
 .attribution {

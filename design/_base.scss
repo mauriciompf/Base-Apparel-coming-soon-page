@@ -12,11 +12,15 @@ $font: 'Josefin Sans', sans-serif;
 
     body {
         font-size: 16px;
-        font-family: $font; 
+        font-family: $font;
     }
 
     img {
        width: 100%;
        display: block; 
+    }
+
+    input {
+        font-family: inherit;
     }
 }

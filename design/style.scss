@@ -6,6 +6,7 @@ $clr-neutral-dark-grayish-red: hsl(0, 6%, 24%);
 // $gradient-one: Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
 // $gradient-two: Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
 $font: 'Josefin Sans', sans-serif;
+$medium: 600px;
 
 .wrap {
     margin: 0 auto;
@@ -15,8 +16,19 @@ $font: 'Josefin Sans', sans-serif;
 .main__logo {
     margin: 2rem auto;
 
+    @media (min-width: $medium) {
+        margin: 0 auto;
+    }
+
     .main__logo-img {
         width: 50%;
+
+        @media (min-width: $medium) {
+            position: absolute;
+            width: auto;
+            padding: 2rem 0;
+            left: 4rem
+        }
     }
 }
 
@@ -25,10 +37,34 @@ $font: 'Josefin Sans', sans-serif;
     flex-direction: column-reverse;
     background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(255,245,245,1) 100%);
     margin-bottom: 4rem;
+
+    @media (min-width: $medium) {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        margin-bottom: 0;
+        height: 100vh;
+    }
+
+    .main__hero-img {
+        background-image: url(../images/hero-mobile.jpg);
+        background-size: cover;
+        // background-position: center;
+        background-repeat: no-repeat;
+        height: 16rem;
+        
+        @media (min-width: $medium) {
+            background-image: url(../images/hero-desktop.jpg);
+        }
+    }
 }
 
 .main__intro {
     text-align: center;
+
+    @media (min-width: $medium) {
+        text-align: left;
+        margin-top: 10rem;
+    }
     
     .main__intro-title {
         font-size: 3rem;
@@ -36,6 +72,12 @@ $font: 'Josefin Sans', sans-serif;
         text-transform: uppercase;
         margin: 3rem 0 1rem;
         color: $clr-neutral-dark-grayish-red;
+
+        @media (min-width: $medium) {
+            margin-top: 0;
+            padding-right: 12rem;
+            font-size: 5rem;
+        }
 
         .main__intro-title--span {
             color: $clr-primary-desaturated-red;
@@ -45,9 +87,14 @@ $font: 'Josefin Sans', sans-serif;
 
     .main__intro-paragraph {
         color: $clr-primary-desaturated-red;
-        line-height: 1.5;
+        line-height: 1.6;
         font-size: .9rem;
         margin-bottom: 2rem;
+
+        @media (min-width: $medium) {
+            padding-right: 6rem;
+            font-size: 1.1rem;
+        }
     }
 }
 
@@ -56,9 +103,14 @@ $font: 'Josefin Sans', sans-serif;
     align-items: center;
     position: relative;
 
+    @media (min-width: $medium) {
+        width: min(30rem, 100%);
+    }
+
     .main__intro-form-input {
         border-radius: 2rem;
-        padding: 1rem;
+        padding: 1rem 2rem;
+        padding-right: 4.5rem;
         width: 100%;
         border: 1px solid $clr-primary-desaturated-red;
     }
@@ -71,19 +123,24 @@ $font: 'Josefin Sans', sans-serif;
         background: linear-gradient(135deg, rgba(248,191,191,1) 0%, rgba(238,140,140,1) 100%);
         border-radius: 2rem;
         position: absolute;
-        padding: 1rem 1.5rem;
+        padding: min(5%, 0.8rem) 1.5rem;
         border: none;
         right: 0;
+        cursor: pointer;
+        transition: .3s ease-out;
+
+        &:hover,
+        &:focus {
+            box-shadow: 0 9px 20px $clr-primary-desaturated-red;
+            transform: scale(1.1);
+            transition: .3s ease-out;
+        }
     }
 
     .main__intro-form-error {
         display: none;
         width: auto;
     }
-}
-
-.main__hero {
-
 }
 
 .attribution { font-size: 11px; text-align: center; }

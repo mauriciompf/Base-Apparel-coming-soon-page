@@ -82,6 +82,12 @@
     font-size: 4rem;
   }
 }
+@media (min-width: 1067px) {
+  .main__intro .main__intro-title {
+    padding-right: 3rem;
+    letter-spacing: 0.3rem;
+  }
+}
 .main__intro .main__intro-title .main__intro-title--span {
   color: hsl(0, 36%, 70%);
   font-weight: 300;
@@ -138,7 +144,12 @@
 }
 .main__intro-form .main__intro-form-error {
   display: none;
+  position: absolute;
   width: auto;
+  right: 4.5rem;
+}
+.main__intro-form .main__intro-form-error.active {
+  display: block;
 }
 
 aside {
@@ -154,13 +165,4 @@ aside {
     display: block;
     background-image: url(../images/hero-desktop.jpg);
   }
-}
-
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-
-.attribution a {
-  color: hsl(228, 45%, 44%);
 }/*# sourceMappingURL=style.css.map */

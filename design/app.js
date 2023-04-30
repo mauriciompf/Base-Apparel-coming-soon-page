@@ -1,6 +1,7 @@
 const input = document.querySelector(".main__intro-form-input");
 const error = document.querySelector(".main__intro-form-error");
 const submit = document.querySelector(".main__intro-form-button");
+const messageError = document.querySelector(".main__intro-form-message");
 
 function validateEmail() {
     const emailPattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
@@ -8,9 +9,11 @@ function validateEmail() {
 
     if (!emailPattern.test(email)) {
         error.classList.add("active");
-        input.style.border = "1px solid red";
+        messageError.classList.add("active");
+        input.style.border = "2px solid hsl(0, 93%, 68%)";
     } else {
         error.classList.remove("active");
+        messageError.classList.remove("active");
         input.style.border = "1px solid black";
     }
 }

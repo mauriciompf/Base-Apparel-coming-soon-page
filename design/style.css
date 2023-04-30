@@ -31,6 +31,13 @@
 .main {
   height: 100%;
 }
+@media (min-width: 600px) {
+  .main {
+    background: url(../images/bg-pattern-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
 
 .main__logo {
   margin: 2rem auto;
@@ -144,11 +151,27 @@
 }
 .main__intro-form .main__intro-form-error {
   display: none;
-  position: absolute;
-  width: auto;
-  right: 4.5rem;
 }
-.main__intro-form .main__intro-form-error.active {
+@media (min-width: 600px) {
+  .main__intro-form .main__intro-form-error {
+    display: none;
+    position: absolute;
+    width: auto;
+    right: 4.5rem;
+  }
+  .main__intro-form .main__intro-form-error.active {
+    display: block;
+  }
+}
+.main__intro-form .main__intro-form-message {
+  display: none;
+  position: absolute;
+  top: 3.5rem;
+  left: 2rem;
+  color: hsl(0, 93%, 68%);
+  font-size: 0.9rem;
+}
+.main__intro-form .main__intro-form-message.active {
   display: block;
 }
 
